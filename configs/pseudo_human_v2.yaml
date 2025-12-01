@@ -1,0 +1,17 @@
+name: pseudo-human
+knowledge_scope: limited
+discovery_enabled: false
+
+context_budget_tokens: 2000
+max_factors: 8
+max_causal_links: 10
+max_projection_steps: 2
+deliberation_rounds: 2
+
+stm_facts_cap: 8
+stm_causal_cap: 8
+
+ltm_weight: 0.7
+recency_weight: 0.9
+causal_centrality_weight: 0.5
+novelty_weight: 0.3

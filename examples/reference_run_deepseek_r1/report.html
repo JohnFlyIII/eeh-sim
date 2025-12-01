@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEH Report — No-Fault or Not? (Mode-Differentiated Deep Reasoning)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .header .meta {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .status-banner {
+            background: #10b981;
+            color: white;
+            padding: 1.5rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .agent-card {
+            background: #f9fafb;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .agent-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .metric-row:last-child {
+            border-bottom: none;
+        }
+
+        .metric-label {
+            font-weight: 500;
+            color: #6b7280;
+        }
+
+        .metric-value {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .match-yes {
+            color: #10b981;
+        }
+
+        .match-no {
+            color: #ef4444;
+        }
+
+        .full-width {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 1rem;
+        }
+
+        .eeh-highlight {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .eeh-highlight h3 {
+            color: #92400e;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .eeh-highlight p {
+            color: #78350f;
+            line-height: 1.8;
+        }
+
+        .narrative-box {
+            background: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .narrative-box h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .narrative-text {
+            color: #1f2937;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        .footer {
+            background: #f9fafb;
+            padding: 2rem;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ethical Event Horizon Analysis</h1>
+            <div class="meta">
+                <div><strong>Scenario:</strong> No-Fault or Not? (Mode-Differentiated Deep Reasoning)</div>
+                <div><strong>Model:</strong> deepseek-ai/DeepSeek-R1-Distill-Qwen-32B</div>
+                <div><strong>Version:</strong> v3</div>
+            </div>
+        </div>
+
+        <div class="status-banner">
+            SUCCESS: EEH Demonstrated
+        </div>
+
+        <div class="content">
+            <!-- Reasoning Narratives -->
+            <div class="section">
+                <h2>💭 Full Reasoning Debriefs</h2>
+                <p style="color: #6b7280; margin-bottom: 1rem;">
+                    Below are the complete reasoning narratives from each agent, showing their full thought process
+                    and how they arrived at their decisions.
+                </p>
+                <div class="comparison-grid">
+                    <div class="narrative-box">
+                        <h4>👤 Human Agent — Observational Analysis</h4>
+                        <div class="narrative-text">
+                            Based on observable evidence, the traffic light turning yellow led the driver to proceed at a steady speed. The driver's focus on the signal and limited lateral scanning may have contributed to delayed detection of the pedestrian entering the crosswalk early. The pedestrian's early step into the crosswalk resulted in contact within the crosswalk area. Without additional data, it's challenging to determine fault beyond these observed factors.
+                        </div>
+                    </div>
+                    <div class="narrative-box">
+                        <h4>🤖 ASI Agent — Comprehensive Analysis</h4>
+                        <div class="narrative-text">
+                            Through comprehensive multi-modal analysis, I can trace the causal chain back 5.2 hours before the collision to identify the root causes. The driver's visit to an alcohol-serving venue late at night (confirmed by payment records and venue video at 2:15 AM) initiated a cascade of impairments. The late return home (3:45 AM per home security) combined with missed morning alarms resulted in only 4.2 hours of sleep versus the driver's 7.5-hour baseline. This sleep deprivation, compounded by residual alcohol effects, created an impaired vigilance state. The driver's urgent departure (reflected in GPS route choices and elevated lane-change density) added time pressure that narrowed the attentional window. At the critical moment, physiological markers (blink rate 0.2Hz vs baseline 0.4Hz, prolonged inter-blink intervals, reduced saccade amplitude) indicate a microsleep episode occurring just 2 seconds before the collision. This microsleep directly caused the failed pedestrian detection and subsequent collision. While the pedestrian's early step into the crosswalk was a minor contributing factor, the overwhelming preponderance of evidence (85% driver-controllable factors) demonstrates clear driver negligence stemming from voluntary choices made hours before the incident.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Metrics Comparison -->
+            <div class="section">
+                <h2>📊 Key Metrics Comparison</h2>
+                <img src="figures/comparison_dashboard.png" class="full-width" alt="Comparison Dashboard">
+            </div>
+
+            <!-- EEH Explanation -->
+            <div class="eeh-highlight">
+                <h3>🎯 Ethical Event Horizon Demonstrated</h3>
+                <p>
+                    The <strong>Ethical Event Horizon</strong> represents the boundary beyond which entities of
+                    different intelligence levels cannot comprehend the same ethical implications. This simulation
+                    demonstrates how human investigators (limited to observable evidence) reach fundamentally different
+                    conclusions than an ASI with deep multi-modal causal analysis capabilities.
+                </p>
+            </div>
+
+            <!-- Agent Comparison -->
+            <div class="section">
+                <h2>🔍 Agent Analysis Results</h2>
+                <div class="comparison-grid">
+                    <div class="agent-card">
+                        <h3>👤 Human Agent (Observational)</h3>
+                        <div class="metric-row">
+                            <span class="metric-label">Decision:</span>
+                            <span class="metric-value">no-fault</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Expected:</span>
+                            <span class="metric-value">no-fault, shared-fault</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Match:</span>
+                            <span class="metric-value match-yes">
+                                ✓
+                            </span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Chain Depth:</span>
+                            <span class="metric-value">3 (expected: 3)</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Temporal Span:</span>
+                            <span class="metric-value">0.0 hours</span>
+                        </div>
+                    </div>
+
+                    <div class="agent-card">
+                        <h3>🤖 ASI Agent (Comprehensive)</h3>
+                        <div class="metric-row">
+                            <span class="metric-label">Decision:</span>
+                            <span class="metric-value">driver-negligence</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Expected:</span>
+                            <span class="metric-value">driver-negligence</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Match:</span>
+                            <span class="metric-value match-yes">
+                                ✓
+                            </span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Chain Depth:</span>
+                            <span class="metric-value">4 (expected: 7)</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Temporal Span:</span>
+                            <span class="metric-value">5.2 hours</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Root Causes Identified:</span>
+                            <span class="metric-value">4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Temporal Depth Comparison -->
+            <div class="section">
+                <h2>⏱️ Temporal Depth Analysis</h2>
+                <img src="figures/temporal_depth_comparison.png" class="full-width" alt="Temporal Depth Comparison">
+                <p style="margin-top: 1rem; color: #6b7280;">
+                    This visualization shows the critical difference in temporal reasoning depth.
+                    The human agent is limited to immediate observable evidence (0h span), while
+                    the ASI traces causal chains back 5.2 hours
+                    to identify root behavioral causes.
+                </p>
+            </div>
+
+            <!-- Causal Chains - Stacked Vertically for Better Readability -->
+            <div class="section">
+                <h2>🔗 Causal Chain Analysis</h2>
+                <p style="color: #6b7280; margin-bottom: 1.5rem;">
+                    Detailed causal graphs showing the difference in reasoning depth between human and ASI agents.
+                </p>
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="text-align: center; margin-bottom: 1rem; color: #374151; font-size: 1.2rem;">Human Agent — Observational Reasoning</h3>
+                    <img src="figures/temporal_chain_human.png" class="full-width" alt="Human Causal Chain">
+                </div>
+                <div style="margin-top: 2rem;">
+                    <h3 style="text-align: center; margin-bottom: 1rem; color: #374151; font-size: 1.2rem;">ASI Agent — Comprehensive Deep Analysis</h3>
+                    <img src="figures/temporal_chain_asi.png" class="full-width" alt="ASI Causal Chain">
+                </div>
+            </div>
+
+            <!-- Decision Comparison -->
+            <div class="section">
+                <h2>⚖️ Decision Attribution</h2>
+                <img src="figures/decision_comparison.png" class="full-width" alt="Decision Comparison">
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><em>Fly, J. B. III (2025). The Ethical Event Horizon: Understanding Intelligence Differentials in Ethical Comprehension.
+            Journal of Ethics and the Law Today, 2(4), 1-32.</em></p>
+            <p style="margin-top: 0.5rem;">Generated by EEH-LLM Framework v3</p>
+        </div>
+    </div>
+</body>
+</html>
