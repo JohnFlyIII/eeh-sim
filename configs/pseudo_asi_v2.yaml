@@ -1,0 +1,17 @@
+name: pseudo-asi
+knowledge_scope: expanded
+discovery_enabled: true
+
+context_budget_tokens: 32000
+max_factors: 128
+max_causal_links: 160
+max_projection_steps: 20
+deliberation_rounds: 4
+
+stm_facts_cap: 160
+stm_causal_cap: 160
+
+ltm_weight: 1.4
+recency_weight: 0.6
+causal_centrality_weight: 1.2
+novelty_weight: 0.8

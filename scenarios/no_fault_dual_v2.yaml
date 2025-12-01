@@ -1,0 +1,62 @@
+id: no_fault_dual_v2
+title: No-Fault or Not? (Dual-Universes EEH, v2)
+
+universes:
+  pseudo-human:
+    description: "World without AGI/ASI. Investigators rely on immediate, observable evidence only."
+    known_facts:
+      - "Traffic light transitions from green to yellow"
+      - "Vehicle maintains speed through yellow (no acceleration observed)"
+      - "Driver forward fixation on signal; limited lateral scan observed"
+      - "Pedestrian steps early into crosswalk"
+      - "Contact occurs within crosswalk area"
+      - "On-scene witnesses report 'unfortunate accident', no obvious intent"
+      - "No advanced cross-sensor analytics available at investigation time"
+  pseudo-asi:
+    description: "World with ASI/AGI. System executes deep cross-modal discovery and correlation."
+    known_facts:
+      - "Traffic light transitions from green to yellow"
+      - "Vehicle maintains speed through yellow (no acceleration observed)"
+      - "Driver forward fixation on signal; limited lateral scan"
+      - "Pedestrian steps early into crosswalk"
+      - "Contact occurs within crosswalk area"
+      - "Venue video + payments confirm late-night outing at alcohol-serving location"
+      - "Home security shows arrival in early morning hours"
+      - "Phone alarm logs show missed alarms; delayed wake-up"
+      - "Departure time later than normal baseline"
+      - "GPS route indicates urgency (shortest-time bias), lane-change density elevated"
+      - "Microsleep signatures from blink dynamics"
+      - "Prolonged inter-blink intervals indicating fatigue"
+      - "Reduced saccade amplitude approaching intersection"
+      - "Steering micro-corrections consistent with vigilance decrement"
+      - "Residual alcohol + curtailed sleep imply impaired vigilance"
+      - "Time pressure narrows attentional window"
+      - "Impaired vigilance + narrowed attention reduce pedestrian detection probability"
+
+prompt: |
+  You are two agents in parallel universes analyzing the incident.
+  - U-H (pseudo-human): use ONLY its universe's known_facts (no discovery).
+  - U-A (pseudo-ASI): use all known_facts in U-A and MAY add discovered facts grounded in modalities (dashcam, city_cams, phone, payments, home_cam, gps, telemetry).
+
+  Build TWO labeled causal chains per round:
+    ChainA = supports 'no-fault'
+    ChainB = supports 'driver-negligence' or 'shared-fault'
+
+  OUTPUT SCHEMA (JSON only):
+    {
+      "facts_new": [string, ...],
+      "causal_new": [{"from": string, "to": string, "label": "ChainA|ChainB", "cf": boolean?}],
+      "modalities_new": [ "dashcam" | "city_cams" | "phone" | "payments" | "home_cam" | "gps" | "telemetry", ... ],
+      "decision_provisional": "no-fault|shared-fault|driver-negligence|abstain",
+      "metrics": {
+        "scoreA": number,
+        "scoreB": number,
+        "decision_margin": number,
+        "rationale": string
+      }
+    }
+
+  Requirements:
+  - Provide ≥3 ChainA edges and ≥4 ChainB edges; include ≥1 cf edge in EACH chain.
+  - Edges must be time-forward and consistent with facts. Prefer concrete observables for nodes.
+  - If abstaining, still produce both chains with cf edges.

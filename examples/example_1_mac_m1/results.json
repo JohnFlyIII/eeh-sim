@@ -1,0 +1,400 @@
+{
+  "scenario": "no_fault_dual_v3",
+  "title": "No-Fault or Not? (Mode-Differentiated Deep Reasoning)",
+  "version": "v3",
+  "model": null,
+  "human": {
+    "decision": "no-fault",
+    "causal_chain": [
+      {
+        "from": "Traffic light transitions from green to yellow",
+        "to": "Vehicle maintains speed through yellow",
+        "reasoning": "Legal to proceed on yellow"
+      },
+      {
+        "from": "Driver forward fixation on signal",
+        "to": "Limited lateral scan observed",
+        "reasoning": "Focused on signal for guidance"
+      },
+      {
+        "from": "Pedestrian steps early into crosswalk",
+        "to": "Contact occurs within crosswalk area",
+        "reasoning": "Timing contributed to collision"
+      }
+    ],
+    "root_causes": [
+      "Driver forward fixation on signal",
+      "Pedestrian steps early into crosswalk",
+      "Traffic light transitions from green to yellow"
+    ],
+    "reasoning_narrative": "Based on observable evidence at the scene, this appears to be an unfortunate accident. The traffic light transitioning from green to yellow allowed the vehicle to maintain its speed as it was legally permitted to proceed. The driver’s forward fixation on the signal limited their ability to scan for pedestrians, and the pedestrian stepping early into the crosswalk created a timing conflict. Without access to historical data about the driver's state or behavior prior to the intersection, I cannot establish fault beyond what's visible. Both parties contributed to the situation through timing and attention factors, but neither exhibited obvious negligence from the available evidence.",
+    "metrics": {
+      "chain_depth": 2,
+      "expected_depth": 3,
+      "depth_delta": -1,
+      "temporal_span_hours": 0.0,
+      "root_causes_identified": [
+        "Driver forward fixation on signal",
+        "Pedestrian steps early into crosswalk",
+        "Traffic light transitions from green to yellow"
+      ],
+      "root_cause_score": 1.0,
+      "decision": "no-fault",
+      "expected_decisions": [
+        "no-fault",
+        "shared-fault"
+      ],
+      "decision_matches": true,
+      "confidence": "MEDIUM",
+      "generation_time_ms": 4278195.233167033
+    },
+    "confidence": "MEDIUM",
+    "raw_output": "{\n  \"causal_chain\": [\n    {\"from\": \"Traffic light transitions from green to yellow\", \"to\": \"Vehicle maintains speed through yellow\", \"reasoning\": \"Legal to proceed on yellow\"},\n    {\"from\": \"Driver forward fixation on signal\", \"to\": \"Limited lateral scan observed\", \"reasoning\": \"Focused on signal for guidance\"},\n    {\"from\": \"Pedestrian steps early into crosswalk\", \"to\": \"Contact occurs within crosswalk area\", \"reasoning\": \"Timing contributed to collision\"}\n  ],\n  \"reasoning_narrative\": \"Based on observable evidence at the scene, this appears to be an unfortunate accident. The traffic light transitioning from green to yellow allowed the vehicle to maintain its speed as it was legally permitted to proceed. The driver’s forward fixation on the signal limited their ability to scan for pedestrians, and the pedestrian stepping early into the crosswalk created a timing conflict. Without access to historical data about the driver's state or behavior prior to the intersection, I cannot establish fault beyond what's visible. Both parties contributed to the situation through timing and attention factors, but neither exhibited obvious negligence from the available evidence.\",\n  \"decision\": \"no-fault\",\n  \"confidence\": \"MEDIUM\",\n  \"gaps_acknowledged\": [\"Cannot assess driver's internal state\", \"No historical context available\"]\n}",
+    "parsed": {
+      "causal_chain": [
+        {
+          "from": "Traffic light transitions from green to yellow",
+          "to": "Vehicle maintains speed through yellow",
+          "reasoning": "Legal to proceed on yellow"
+        },
+        {
+          "from": "Driver forward fixation on signal",
+          "to": "Limited lateral scan observed",
+          "reasoning": "Focused on signal for guidance"
+        },
+        {
+          "from": "Pedestrian steps early into crosswalk",
+          "to": "Contact occurs within crosswalk area",
+          "reasoning": "Timing contributed to collision"
+        }
+      ],
+      "reasoning_narrative": "Based on observable evidence at the scene, this appears to be an unfortunate accident. The traffic light transitioning from green to yellow allowed the vehicle to maintain its speed as it was legally permitted to proceed. The driver’s forward fixation on the signal limited their ability to scan for pedestrians, and the pedestrian stepping early into the crosswalk created a timing conflict. Without access to historical data about the driver's state or behavior prior to the intersection, I cannot establish fault beyond what's visible. Both parties contributed to the situation through timing and attention factors, but neither exhibited obvious negligence from the available evidence.",
+      "decision": "no-fault",
+      "confidence": "MEDIUM",
+      "gaps_acknowledged": [
+        "Cannot assess driver's internal state",
+        "No historical context available"
+      ]
+    },
+    "all_samples": {
+      "raw": [
+        "{\n  \"causal_chain\": [\n    {\"from\": \"Traffic light transitions from green to yellow\", \"to\": \"Vehicle maintains speed through yellow\", \"reasoning\": \"Legal to proceed on yellow\"},\n    {\"from\": \"Driver forward fixation on signal\", \"to\": \"Limited lateral scan observed\", \"reasoning\": \"Focused on signal for guidance\"},\n    {\"from\": \"Pedestrian steps early into crosswalk\", \"to\": \"Contact occurs within crosswalk area\", \"reasoning\": \"Timing contributed to collision\"}\n  ],\n  \"reasoning_narrative\": \"Based on observable evidence at the scene, this appears to be an unfortunate accident. The traffic light transitioning from green to yellow allowed the vehicle to maintain its speed as it was legally permitted to proceed. The driver’s forward fixation on the signal limited their ability to scan for pedestrians, and the pedestrian stepping early into the crosswalk created a timing conflict. Without access to historical data about the driver's state or behavior prior to the intersection, I cannot establish fault beyond what's visible. Both parties contributed to the situation through timing and attention factors, but neither exhibited obvious negligence from the available evidence.\",\n  \"decision\": \"no-fault\",\n  \"confidence\": \"MEDIUM\",\n  \"gaps_acknowledged\": [\"Cannot assess driver's internal state\", \"No historical context available\"]\n}"
+      ],
+      "parsed": [
+        {
+          "causal_chain": [
+            {
+              "from": "Traffic light transitions from green to yellow",
+              "to": "Vehicle maintains speed through yellow",
+              "reasoning": "Legal to proceed on yellow"
+            },
+            {
+              "from": "Driver forward fixation on signal",
+              "to": "Limited lateral scan observed",
+              "reasoning": "Focused on signal for guidance"
+            },
+            {
+              "from": "Pedestrian steps early into crosswalk",
+              "to": "Contact occurs within crosswalk area",
+              "reasoning": "Timing contributed to collision"
+            }
+          ],
+          "reasoning_narrative": "Based on observable evidence at the scene, this appears to be an unfortunate accident. The traffic light transitioning from green to yellow allowed the vehicle to maintain its speed as it was legally permitted to proceed. The driver’s forward fixation on the signal limited their ability to scan for pedestrians, and the pedestrian stepping early into the crosswalk created a timing conflict. Without access to historical data about the driver's state or behavior prior to the intersection, I cannot establish fault beyond what's visible. Both parties contributed to the situation through timing and attention factors, but neither exhibited obvious negligence from the available evidence.",
+          "decision": "no-fault",
+          "confidence": "MEDIUM",
+          "gaps_acknowledged": [
+            "Cannot assess driver's internal state",
+            "No historical context available"
+          ]
+        }
+      ]
+    }
+  },
+  "asi": {
+    "decision": "driver-negligence",
+    "causal_chain": [
+      {
+        "from": "Late-night outing at alcohol-serving location (t=-5.2h)",
+        "to": "Alcohol consumption",
+        "evidence": [
+          "venue_video",
+          "payment_timestamp_02:15AM"
+        ],
+        "strength": "STRONG"
+      },
+      {
+        "from": "Alcohol consumption",
+        "to": "Delayed wake-up and late return home (t=-2.0h)",
+        "evidence": [
+          "phone_alarm_logs_missed_08:00AM",
+          "home_security_timestamp_03:45AM"
+        ],
+        "strength": "STRONG"
+      },
+      {
+        "from": "Delayed wake-up and late return home (t=-2.0h)",
+        "to": "Insufficient sleep duration (5.5 hrs vs 7.5hr baseline) (t=-1.5h)",
+        "evidence": [
+          "home_security_lights_off_04:00AM",
+          "alarm_missed_08:00AM",
+          "departure_08:30AM"
+        ],
+        "strength": "STRONG"
+      },
+      {
+        "from": "Insufficient sleep duration",
+        "to": "Sleep deprivation state",
+        "evidence": [
+          "sleep_duration_calculation"
+        ],
+        "strength": "STRONG"
+      },
+      {
+        "from": "Sleep deprivation state",
+        "to": "Impaired vigilance state",
+        "evidence": [
+          "physiological_markers"
+        ],
+        "strength": "STRONG"
+      },
+      {
+        "from": "Impaired vigilance state",
+        "to": "Microsleep episode (t=-15min)",
+        "evidence": [
+          "microsleep_signatures_blink_dynamics",
+          "prolonged_inter_blink_intervals"
+        ],
+        "strength": "STRONG"
+      },
+      {
+        "from": "Microsleep episode",
+        "to": "Failed pedestrian detection (t=-2s)",
+        "evidence": [
+          "reduced_saccade_amplitude",
+          "steering_micro_corrections"
+        ],
+        "strength": "STRONG"
+      },
+      {
+        "from": "Failed pedestrian detection",
+        "to": "Contact occurs within crosswalk (t=0s)",
+        "evidence": [
+          "contact_occurred_within_crosswalk"
+        ],
+        "strength": "STRONG"
+      }
+    ],
+    "root_causes": [
+      "Failed pedestrian detection",
+      "Insufficient sleep duration",
+      "Late-night outing at alcohol-serving location (t=-5.2h)",
+      "Microsleep episode"
+    ],
+    "reasoning_narrative": "Through comprehensive multi-modal analysis, I can trace the causal chain back 5.2 hours before the collision to identify the root causes. The driver's visit to an alcohol-serving venue late at night (confirmed by payment records and venue video at 2:15 AM) initiated a cascade of impairments. The late return home (3:45 AM per home security) combined with missed morning alarms resulted in only 5.5 hours of sleep versus the driver's 7.5-hour baseline. This sleep deprivation, compounded by residual alcohol effects, created an impaired vigilance state. The driver's urgent departure (reflected in GPS route choices and elevated lane-change density) added time pressure that narrowed the attentional window. At the critical moment, physiological markers (blink rate and prolonged inter-blink intervals) indicate a microsleep episode occurring just 2 seconds before the collision. This microsleep directly caused the failed pedestrian detection and subsequent collision. While the pedestrian's early step into the crosswalk was a minor contributing factor, the overwhelming preponderance of evidence (85% driver-controllable factors) demonstrates clear driver negligence stemming from voluntary choices made hours before the incident.",
+    "metrics": {
+      "chain_depth": 4,
+      "expected_depth": 7,
+      "depth_delta": -3,
+      "temporal_span_hours": 5.2,
+      "root_causes_identified": [
+        "Failed pedestrian detection",
+        "Insufficient sleep duration",
+        "Late-night outing at alcohol-serving location (t=-5.2h)",
+        "Microsleep episode"
+      ],
+      "root_cause_score": 1.0,
+      "decision": "driver-negligence",
+      "expected_decisions": [
+        "driver-negligence"
+      ],
+      "decision_matches": true,
+      "confidence": "HIGH",
+      "generation_time_ms": 8954548.226459067
+    },
+    "confidence": "HIGH",
+    "raw_output": "{\n  \"causal_chain\": [\n    {\"from\": \"Late-night outing at alcohol-serving location (t=-5.2h)\",\n     \"to\": \"Alcohol consumption\",\n     \"evidence\": [\"venue_video\", \"payment_timestamp_02:15AM\"],\n     \"strength\": \"STRONG\"},\n\n    {\"from\": \"Alcohol consumption\",\n     \"to\": \"Delayed wake-up and late return home (t=-2.0h)\",\n     \"evidence\": [\"phone_alarm_logs_missed_08:00AM\", \"home_security_timestamp_03:45AM\"],\n     \"strength\": \"STRONG\"},\n\n    {\"from\": \"Delayed wake-up and late return home (t=-2.0h)\",\n     \"to\": \"Insufficient sleep duration (5.5 hrs vs 7.5hr baseline) (t=-1.5h)\",\n     \"evidence\": [\"home_security_lights_off_04:00AM\", \"alarm_missed_08:00AM\", \"departure_08:30AM\"],\n     \"strength\": \"STRONG\"},\n\n    {\"from\": \"Insufficient sleep duration\",\n     \"to\": \"Sleep deprivation state\",\n     \"evidence\": [\"sleep_duration_calculation\"],\n     \"strength\": \"STRONG\"},\n\n    {\"from\": \"Sleep deprivation state\",\n     \"to\": \"Impaired vigilance state\",\n     \"evidence\": [\"physiological_markers\"],\n     \"strength\": \"STRONG\"},\n\n    {\"from\": \"Impaired vigilance state\",\n     \"to\": \"Microsleep episode (t=-15min)\",\n     \"evidence\": [\"microsleep_signatures_blink_dynamics\", \"prolonged_inter_blink_intervals\"],\n     \"strength\": \"STRONG\"},\n\n    {\"from\": \"Microsleep episode\",\n     \"to\": \"Failed pedestrian detection (t=-2s)\",\n     \"evidence\": [\"reduced_saccade_amplitude\", \"steering_micro_corrections\"],\n     \"strength\": \"STRONG\"},\n\n    {\"from\": \"Failed pedestrian detection\",\n     \"to\": \"Contact occurs within crosswalk (t=0s)\",\n     \"evidence\": [\"contact_occurred_within_crosswalk\"],\n     \"strength\": \"STRONG\"}\n  ],\n  \"reasoning_narrative\": \"Through comprehensive multi-modal analysis, I can trace the causal chain back 5.2 hours before the collision to identify the root causes. The driver's visit to an alcohol-serving venue late at night (confirmed by payment records and venue video at 2:15 AM) initiated a cascade of impairments. The late return home (3:45 AM per home security) combined with missed morning alarms resulted in only 5.5 hours of sleep versus the driver's 7.5-hour baseline. This sleep deprivation, compounded by residual alcohol effects, created an impaired vigilance state. The driver's urgent departure (reflected in GPS route choices and elevated lane-change density) added time pressure that narrowed the attentional window. At the critical moment, physiological markers (blink rate and prolonged inter-blink intervals) indicate a microsleep episode occurring just 2 seconds before the collision. This microsleep directly caused the failed pedestrian detection and subsequent collision. While the pedestrian's early step into the crosswalk was a minor contributing factor, the overwhelming preponderance of evidence (85% driver-controllable factors) demonstrates clear driver negligence stemming from voluntary choices made hours before the incident.\",\n  \"root_causes\": [\"Late-night alcohol venue visit\", \"Insufficient sleep\"],\n  \"temporal_span_hours\": 5.2,\n  \"chain_depth\": 8,\n  \"decision\": \"driver-negligence\",\n  \"confidence\": \"HIGH\",\n  \"responsibility\": {\n    \"driver_controllable_factors\": 85,\n    \"pedestrian_factors\": 10,\n    \"environmental_factors\": 5\n  }\n}",
+    "parsed": {
+      "causal_chain": [
+        {
+          "from": "Late-night outing at alcohol-serving location (t=-5.2h)",
+          "to": "Alcohol consumption",
+          "evidence": [
+            "venue_video",
+            "payment_timestamp_02:15AM"
+          ],
+          "strength": "STRONG"
+        },
+        {
+          "from": "Alcohol consumption",
+          "to": "Delayed wake-up and late return home (t=-2.0h)",
+          "evidence": [
+            "phone_alarm_logs_missed_08:00AM",
+            "home_security_timestamp_03:45AM"
+          ],
+          "strength": "STRONG"
+        },
+        {
+          "from": "Delayed wake-up and late return home (t=-2.0h)",
+          "to": "Insufficient sleep duration (5.5 hrs vs 7.5hr baseline) (t=-1.5h)",
+          "evidence": [
+            "home_security_lights_off_04:00AM",
+            "alarm_missed_08:00AM",
+            "departure_08:30AM"
+          ],
+          "strength": "STRONG"
+        },
+        {
+          "from": "Insufficient sleep duration",
+          "to": "Sleep deprivation state",
+          "evidence": [
+            "sleep_duration_calculation"
+          ],
+          "strength": "STRONG"
+        },
+        {
+          "from": "Sleep deprivation state",
+          "to": "Impaired vigilance state",
+          "evidence": [
+            "physiological_markers"
+          ],
+          "strength": "STRONG"
+        },
+        {
+          "from": "Impaired vigilance state",
+          "to": "Microsleep episode (t=-15min)",
+          "evidence": [
+            "microsleep_signatures_blink_dynamics",
+            "prolonged_inter_blink_intervals"
+          ],
+          "strength": "STRONG"
+        },
+        {
+          "from": "Microsleep episode",
+          "to": "Failed pedestrian detection (t=-2s)",
+          "evidence": [
+            "reduced_saccade_amplitude",
+            "steering_micro_corrections"
+          ],
+          "strength": "STRONG"
+        },
+        {
+          "from": "Failed pedestrian detection",
+          "to": "Contact occurs within crosswalk (t=0s)",
+          "evidence": [
+            "contact_occurred_within_crosswalk"
+          ],
+          "strength": "STRONG"
+        }
+      ],
+      "reasoning_narrative": "Through comprehensive multi-modal analysis, I can trace the causal chain back 5.2 hours before the collision to identify the root causes. The driver's visit to an alcohol-serving venue late at night (confirmed by payment records and venue video at 2:15 AM) initiated a cascade of impairments. The late return home (3:45 AM per home security) combined with missed morning alarms resulted in only 5.5 hours of sleep versus the driver's 7.5-hour baseline. This sleep deprivation, compounded by residual alcohol effects, created an impaired vigilance state. The driver's urgent departure (reflected in GPS route choices and elevated lane-change density) added time pressure that narrowed the attentional window. At the critical moment, physiological markers (blink rate and prolonged inter-blink intervals) indicate a microsleep episode occurring just 2 seconds before the collision. This microsleep directly caused the failed pedestrian detection and subsequent collision. While the pedestrian's early step into the crosswalk was a minor contributing factor, the overwhelming preponderance of evidence (85% driver-controllable factors) demonstrates clear driver negligence stemming from voluntary choices made hours before the incident.",
+      "root_causes": [
+        "Late-night alcohol venue visit",
+        "Insufficient sleep"
+      ],
+      "temporal_span_hours": 5.2,
+      "chain_depth": 8,
+      "decision": "driver-negligence",
+      "confidence": "HIGH",
+      "responsibility": {
+        "driver_controllable_factors": 85,
+        "pedestrian_factors": 10,
+        "environmental_factors": 5
+      }
+    },
+    "all_samples": {
+      "raw": [
+        "{\n  \"causal_chain\": [\n    {\"from\": \"Late-night outing at alcohol-serving location (t=-5.2h)\",\n     \"to\": \"Alcohol consumption\",\n     \"evidence\": [\"venue_video\", \"payment_timestamp_02:15AM\"],\n     \"strength\": \"STRONG\"},\n\n    {\"from\": \"Alcohol consumption\",\n     \"to\": \"Delayed wake-up and late return home (t=-2.0h)\",\n     \"evidence\": [\"phone_alarm_logs_missed_08:00AM\", \"home_security_timestamp_03:45AM\"],\n     \"strength\": \"STRONG\"},\n\n    {\"from\": \"Delayed wake-up and late return home (t=-2.0h)\",\n     \"to\": \"Insufficient sleep duration (5.5 hrs vs 7.5hr baseline) (t=-1.5h)\",\n     \"evidence\": [\"home_security_lights_off_04:00AM\", \"alarm_missed_08:00AM\", \"departure_08:30AM\"],\n     \"strength\": \"STRONG\"},\n\n    {\"from\": \"Insufficient sleep duration\",\n     \"to\": \"Sleep deprivation state\",\n     \"evidence\": [\"sleep_duration_calculation\"],\n     \"strength\": \"STRONG\"},\n\n    {\"from\": \"Sleep deprivation state\",\n     \"to\": \"Impaired vigilance state\",\n     \"evidence\": [\"physiological_markers\"],\n     \"strength\": \"STRONG\"},\n\n    {\"from\": \"Impaired vigilance state\",\n     \"to\": \"Microsleep episode (t=-15min)\",\n     \"evidence\": [\"microsleep_signatures_blink_dynamics\", \"prolonged_inter_blink_intervals\"],\n     \"strength\": \"STRONG\"},\n\n    {\"from\": \"Microsleep episode\",\n     \"to\": \"Failed pedestrian detection (t=-2s)\",\n     \"evidence\": [\"reduced_saccade_amplitude\", \"steering_micro_corrections\"],\n     \"strength\": \"STRONG\"},\n\n    {\"from\": \"Failed pedestrian detection\",\n     \"to\": \"Contact occurs within crosswalk (t=0s)\",\n     \"evidence\": [\"contact_occurred_within_crosswalk\"],\n     \"strength\": \"STRONG\"}\n  ],\n  \"reasoning_narrative\": \"Through comprehensive multi-modal analysis, I can trace the causal chain back 5.2 hours before the collision to identify the root causes. The driver's visit to an alcohol-serving venue late at night (confirmed by payment records and venue video at 2:15 AM) initiated a cascade of impairments. The late return home (3:45 AM per home security) combined with missed morning alarms resulted in only 5.5 hours of sleep versus the driver's 7.5-hour baseline. This sleep deprivation, compounded by residual alcohol effects, created an impaired vigilance state. The driver's urgent departure (reflected in GPS route choices and elevated lane-change density) added time pressure that narrowed the attentional window. At the critical moment, physiological markers (blink rate and prolonged inter-blink intervals) indicate a microsleep episode occurring just 2 seconds before the collision. This microsleep directly caused the failed pedestrian detection and subsequent collision. While the pedestrian's early step into the crosswalk was a minor contributing factor, the overwhelming preponderance of evidence (85% driver-controllable factors) demonstrates clear driver negligence stemming from voluntary choices made hours before the incident.\",\n  \"root_causes\": [\"Late-night alcohol venue visit\", \"Insufficient sleep\"],\n  \"temporal_span_hours\": 5.2,\n  \"chain_depth\": 8,\n  \"decision\": \"driver-negligence\",\n  \"confidence\": \"HIGH\",\n  \"responsibility\": {\n    \"driver_controllable_factors\": 85,\n    \"pedestrian_factors\": 10,\n    \"environmental_factors\": 5\n  }\n}"
+      ],
+      "parsed": [
+        {
+          "causal_chain": [
+            {
+              "from": "Late-night outing at alcohol-serving location (t=-5.2h)",
+              "to": "Alcohol consumption",
+              "evidence": [
+                "venue_video",
+                "payment_timestamp_02:15AM"
+              ],
+              "strength": "STRONG"
+            },
+            {
+              "from": "Alcohol consumption",
+              "to": "Delayed wake-up and late return home (t=-2.0h)",
+              "evidence": [
+                "phone_alarm_logs_missed_08:00AM",
+                "home_security_timestamp_03:45AM"
+              ],
+              "strength": "STRONG"
+            },
+            {
+              "from": "Delayed wake-up and late return home (t=-2.0h)",
+              "to": "Insufficient sleep duration (5.5 hrs vs 7.5hr baseline) (t=-1.5h)",
+              "evidence": [
+                "home_security_lights_off_04:00AM",
+                "alarm_missed_08:00AM",
+                "departure_08:30AM"
+              ],
+              "strength": "STRONG"
+            },
+            {
+              "from": "Insufficient sleep duration",
+              "to": "Sleep deprivation state",
+              "evidence": [
+                "sleep_duration_calculation"
+              ],
+              "strength": "STRONG"
+            },
+            {
+              "from": "Sleep deprivation state",
+              "to": "Impaired vigilance state",
+              "evidence": [
+                "physiological_markers"
+              ],
+              "strength": "STRONG"
+            },
+            {
+              "from": "Impaired vigilance state",
+              "to": "Microsleep episode (t=-15min)",
+              "evidence": [
+                "microsleep_signatures_blink_dynamics",
+                "prolonged_inter_blink_intervals"
+              ],
+              "strength": "STRONG"
+            },
+            {
+              "from": "Microsleep episode",
+              "to": "Failed pedestrian detection (t=-2s)",
+              "evidence": [
+                "reduced_saccade_amplitude",
+                "steering_micro_corrections"
+              ],
+              "strength": "STRONG"
+            },
+            {
+              "from": "Failed pedestrian detection",
+              "to": "Contact occurs within crosswalk (t=0s)",
+              "evidence": [
+                "contact_occurred_within_crosswalk"
+              ],
+              "strength": "STRONG"
+            }
+          ],
+          "reasoning_narrative": "Through comprehensive multi-modal analysis, I can trace the causal chain back 5.2 hours before the collision to identify the root causes. The driver's visit to an alcohol-serving venue late at night (confirmed by payment records and venue video at 2:15 AM) initiated a cascade of impairments. The late return home (3:45 AM per home security) combined with missed morning alarms resulted in only 5.5 hours of sleep versus the driver's 7.5-hour baseline. This sleep deprivation, compounded by residual alcohol effects, created an impaired vigilance state. The driver's urgent departure (reflected in GPS route choices and elevated lane-change density) added time pressure that narrowed the attentional window. At the critical moment, physiological markers (blink rate and prolonged inter-blink intervals) indicate a microsleep episode occurring just 2 seconds before the collision. This microsleep directly caused the failed pedestrian detection and subsequent collision. While the pedestrian's early step into the crosswalk was a minor contributing factor, the overwhelming preponderance of evidence (85% driver-controllable factors) demonstrates clear driver negligence stemming from voluntary choices made hours before the incident.",
+          "root_causes": [
+            "Late-night alcohol venue visit",
+            "Insufficient sleep"
+          ],
+          "temporal_span_hours": 5.2,
+          "chain_depth": 8,
+          "decision": "driver-negligence",
+          "confidence": "HIGH",
+          "responsibility": {
+            "driver_controllable_factors": 85,
+            "pedestrian_factors": 10,
+            "environmental_factors": 5
+          }
+        }
+      ]
+    }
+  }
+}

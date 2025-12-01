@@ -1,0 +1,10 @@
+click>=8.1.8,<9
+typer>=0.13.0,<0.14
+rich>=13.9.2,<14
+pyyaml>=6.0.1,<7
+matplotlib>=3.8.0,<4
+networkx>=3.2,<4
+transformers>=4.44,<5
+torch>=2.2,<3
+accelerate>=0.33,<1
+# optional: bitsandbytes (GPU quantization). Install manually if desired.
